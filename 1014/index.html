@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		// function templating 
+		const o1 = {};
+
+		o1.f = function(){
+			return 3; 
+		}
+
+		o2 = {};
+		o2.f = o1.f;
+
+		o3 = Object.create(o1);
+
+
+		// console.assert(o.f()=='3');
+		console.log(o3.f()); 
+	</script>
+</head>
+<body>
+
+</body>
+</html>

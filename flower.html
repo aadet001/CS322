@@ -5,23 +5,30 @@
 		image manipulation using javascript
 	</title>
 	<style type="text/css">
-		img {
-			width: 128px; 
+		#flowerImage {
+			width: 320px; 
 		}
 	</style>
 </head>
 <body>
 	<img id="flowerImage" src="flower.jpg">
 
-
+	<!-- toggle which image is displayed on the screen -->
 	<script type="text/javascript">
-		(function(){
+		(function(){ 
 			let flowerImageChecked = false; 
-			let flowerImage = document.getElementsByTagId('flowerImage'); 
+			let flowerImage = document.getElementById('flowerImage'); 
 			function toggleFlower(){
-				// flowerImage.src = "flower2.jpg"; 
+				if(flowerImageChecked){
+					flowerImage.src = "flower.jpg"; 
+					flowerImageChecked  = false; 
+				} else {
+					flowerImage.src = "flower2.jpg"; 
+					flowerImageChecked  = true; 
+				}
 			}
-		})
+			flowerImage.addEventListener('click', toggleFlower); 
+		})(); 
 
 	</script>
 </body>
